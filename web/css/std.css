@@ -10,10 +10,10 @@ html, body {
   width: 100%;
 }
 #footer {
-  width: 100%;
+  width: 90%;
   clear: left;
   background: #efefef;
-  text-align: center;  padding: 5px;
+  text-align: center;  padding: 0.1em;
   position: fixed;  bottom: 0px;
   color: #808080; 
 }
@@ -56,8 +56,3 @@ a {
 a:hover {
   color: orange;
 }
-fieldset {
-  width: 70%; 
-  border: 1px solid cornflowerblue; 
-  background: none repeat scroll 0% 0% lavender;
-}
