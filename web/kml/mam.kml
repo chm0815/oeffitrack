@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>2011-07-21 13:20 Schnorcheln bei Mahmya</name>
+  <description><![CDATA[Schnorcheln bei Mahmya]]></description>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle_maps.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <LineStyle>
+      <color>800000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/paddle/red-circle_maps.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>2011-07-21 13:20 (Start)</name>
+    <Snippet></Snippet>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style1</styleUrl>
+    <ExtendedData>
+      <Data name="&gt;_androidId">
+        <value>1311861626959.6444</value>
+      </Data>
+    </ExtendedData>
+    <Point>
+      <coordinates>33.955212,27.211021,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2011-07-21 13:20</name>
+    <Snippet></Snippet>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style1</styleUrl>
+    <ExtendedData>
+      <Data name="&gt;_androidId">
+        <value>1311861632715.6927</value>
+      </Data>
+    </ExtendedData>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        33.955212,27.211021,0.000000
+        33.955120,27.210962,0.000000
+        33.955109,27.210854,0.000000
+        33.955147,27.210688,0.000000
+        33.955330,27.210382,0.000000
+        33.955788,27.209814,0.000000
+        33.956268,27.208891,0.000000
+        33.956482,27.208397,0.000000
+        33.956814,27.207470,0.000000
+        33.957237,27.206514,0.000000
+        33.957504,27.205647,0.000000
+        33.957714,27.205088,0.000000
+        33.958637,27.203054,0.000000
+        33.958927,27.202335,0.000000
+        33.959808,27.200598,0.000000
+        33.960339,27.199390,0.000000
+        33.960709,27.198624,0.000000
+        33.961002,27.197836,0.000000
+        33.961330,27.197100,0.000000
+        33.961594,27.196333,0.000000
+        33.962429,27.194403,0.000000
+        33.962879,27.193216,0.000000
+        33.963905,27.190866,0.000000
+        33.964073,27.190405,0.000000
+        33.964325,27.189398,0.000000
+        33.964455,27.189005,0.000000
+        33.964699,27.188416,0.000000
+        33.965252,27.187330,0.000000
+        33.965450,27.186794,0.000000
+        33.965527,27.186478,0.000000
+        33.965702,27.185190,0.000000
+        33.965752,27.184628,0.000000
+        33.965679,27.184246,0.000000
+        33.965569,27.184044,0.000000
+        33.965454,27.183920,0.000000
+        33.965164,27.183743,0.000000
+        33.964951,27.183651,0.000000
+        33.963940,27.183414,0.000000
+        33.963737,27.183414,0.000000
+        33.963482,27.183533,0.000000
+        33.963428,27.183523,0.000000
+        33.963406,27.183565,0.000000
+        33.963352,27.183577,0.000000
+        33.963223,27.183517,0.000000
+        33.962845,27.183517,0.000000
+        33.962318,27.183411,0.000000
+        33.962067,27.183411,0.000000
+        33.961830,27.183474,0.000000
+        33.961727,27.183538,0.000000
+        33.961433,27.183823,0.000000
+        33.961239,27.183722,0.000000
+        33.960564,27.183186,0.000000
+        33.960125,27.182730,0.000000
+        33.959942,27.182467,0.000000
+        33.959789,27.182304,0.000000
+        33.959743,27.182278,0.000000
+        33.959637,27.182289,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>2011-07-21 13:20 (Ende)</name>
+    <Snippet>Erstellt von My Tracks für Android.Gesamtentfernung: 3,95 km (2,5 mi)Gesamtzeit</Snippet>
+    <description><![CDATA[<p></p><p>Erstellt von <a href="http://mytracks.appspot.com" target="_blank">My Tracks</a> für Android.<p>Gesamtentfernung: 3,95 km (2,5 mi)<br>Gesamtzeit: 29:35<br>Zeit in Bewegung: 20:15<br>Durchschnittsgeschw.: 8,00 km/h (5,0 mi/h)<br> Durchschnitt in Bew.: 11,69 km/h (7,3 mi/h)<br> Max. Geschwindigkeit: 16,20 km/h (10,1 mi/h)<br>Niedrigste Höhenlage: 14 m (46 Fuß)<br>Höchste Höhenlage: 31 m (102 Fuß)<br>Höhengewinn: 24 m (79 Fuß)<br>Maximale Steigung: 0 %<br>Minimale Steigung: 0 %<br>Aufgezeichnet am: Do Jul 21 13:20:19 MESZ 2011<br>Aktivität: schnorcheln<br><img border="0" src="http://chart.apis.google.com/chart?&amp;chs=600x350&amp;cht=lxy&amp;chtt=Höhe&amp;chxt=x,y&amp;chxr=0,0,3,0|1,0.0,100.0,25&amp;chco=009A00&amp;chm=B,00AA00,0,0,0&amp;chg=100000,25.0,1,0&amp;chd=e:AAAFAFAFALARAYAdAkArA0A6BABGBMBTBaBiBoBvB2B-CGCOCVCcCkCuC2C.DHDPDYDgDoDwD5EBEJEREZEiEqE0E8FFFOFWFfFoFxF5GCGLGTGbGlGtG1G-HGHOHXHfHoHwH5IBIJISIaIkIsI0I9JGJOJXJgJoJxJ5KCKLKTKbKkKtK1K-LGLPLXLgLoLxL5MCMLMTMbMkMtM1M-NFNPNYNgNpNyN7OEOMOVOeOnOwO5PBPKPTPcPlPtP2P.QHQQQZQhQqQzQ8RFRORXRgRpRxR7SDSMSVSeSmSvS4TBTJTSTbTkTtT1T-UGUPUYUhUqUyU7VDVNVVVeVnVwV5WBWLWTWcWlWtW2W.XIXQXZXiXqXzX8YFYNYVYfYoYwY5ZCZKZTZcZkZtZ3Z.aIaRaaajata2a.bIbRbabjbtb2cAcJcScbclcuc3dAdJdSdbdldud3eBeJeSeceleve4fBfKfSfcflfvf4gAgKgTgYghgqg0g9hGhPhZhhhrh1h-iHiQiZijisi1i-jIjRjajjjtj2kAkIkSkbkkktk2lAlJlSlXlglplzl7mFmOmYmgmqmzm9nFnOnYnhnrn0n9oGoPoYohoro0o-pHpQpZpiprp0p8qGqQqZqjqrq1q-rHrQrZrirrr1r-sHsMsVsfsosus3tBtKtTtdtmtst0t-uIuRuauiusu1u-vIvRvbvkvtv3wAwJwTwcwlwvw4xCxKxUxdxnxwx5yCyMyVyeyoyxy5zDzMzUzdzmzvz40B0K0T0c0l0u020.1G1P1W1e1m1u12192F2N2V2c2k2r2y263A3H3N3S3X3e3l3q3w314E4a4g4m4s4y444.5F5L5R5Y5d5j5q5x53596D6K6P6X6e6k6p6v60677A7G7L7R7X7d7j7o7u71768A8G8L8S8Y8d8j8p8v81869A9F9L9Q9W9d9i9o9u9z959.-F-K-Q-W-c-i-o-u-0-6.B.G.M.S.X,T1RmQ2QoP.PkPLO4OtOlOeOZOROKOEN.N7N3NzNuNrNnNjNfNdNLNDM7MxMuMqMnMkMfMaMVMQMNMKMGMDMAL-L7L5L2L0L0LzLvLuLuLuLuLuLuLvLxLzL0L2L4L5L7L8L-MAMAMBMDMFMGMFMFMFMDMDMBMAL-L8L8L8L8L8L7L5L4L2L0LxLuLqLnLkLhLdLcLaLYLXLTLSLQLPLNLKLGLDLAK-K9K7K5K4K4K4K5K7K9K-LALALALALALALALALALALALALALALBLDLFLGLILKLLLLLKLILGLFLFLFLFLFLGLILKLLLNLPLQLSLVLXLYLaLcLdLfLhLiLmLpLsLvLzL2L5L8L-MAMBMDMFMIMKMLMLMLMLMLMLMLMNMOMOMOMOMOMQMQMQMQMQMQMQMQMQMQMOMOMOMOMOMOMNMLMKMGMDMBMBMBMBMAMAMBMDMFMGMIMKMKMKMKMLMNMOMQMQMTMVMXMYMaMdMfMgMgMgMgMfMdMdMdMdMcMcMcMcMaMYMXMVMVMTMTMTMTMTMSMQMOMOMNMNMNMNMKMGMDMBMAL-L-L-L8L7L5L4L2L0LzLxLxLvLuLsLqLqLpLnLmLmLmLmLmLmLmLkLiLiLiLiLiLiLiLiLkLkLmLnLpLqLsLuLvLxLzL0L2L4L5L8MAMDMIMLMOMSMTMVMXMVMTMSMQMOMNMKMGMDMAL8L5L4L2L0LxLuLqLkLfLaLVLSLPLLLKLILGLGLGLGLILKLLLNLQLTLVLXLYLaLcLdLhLkLnLqLuLxL0L4L7L-MAMBMDMFMGMIMKMKMKMKMKMKMIMGMFMDMBMAL-L8L7L5L4L5L5L5L5L5L5L5L5L5L5L5L5L5L5L7L8L-MAMBMDMFMGMIMKMLMKMKMKMKMOMTMaMgMlMpMsMuMuMuMuMuMsMqMpMlMiMfMcMYMVMQMLMGMBL4LsLfLSLGK9KxKnKfKXKPKIKCJ9J4J0JxJsJpJmJiJhJh"></p>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <ExtendedData>
+      <Data name="&gt;_androidId">
+        <value>1311861635694.9927</value>
+      </Data>
+    </ExtendedData>
+    <Point>
+      <coordinates>33.959637,27.182289,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

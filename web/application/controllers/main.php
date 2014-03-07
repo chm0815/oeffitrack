@@ -5,7 +5,7 @@ class Main extends CI_Controller
   function index()
   {
     $this->load->view("stdheader");
-    
+    $this->load->view("overview");
     $this->load->view("stdfooter");
   }
 }

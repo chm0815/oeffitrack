@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/km/2.2">
+  <Document>
+    <name>Ankunftszeiten</name>
+    <description>Test</description>
+    <Style id="routepoint">
+      <IconStyle>
+        <Icon>
+          <href>/img/busstop.png</href>
+        </Icon>
+      </IconStyle>
+	</Style>
+    <Placemark>
+      <name>1</name>
+      <styleUrl>#routepoint</styleUrl>
+		<description>
+<![CDATA[
+<h3>Routename</h3>
+Linie 1
+<hr>
+<strong>Soll 12:30 | Ist 12:25</strong>
+</br>
+]]>
+		</description>
+
+		<Point>
+		  <coordinates>14,15</coordinates>
+		</Point>
+	</Placemark>
+  
+      <Placemark>
+      <name>2</name>
+      <styleUrl>#routepoint</styleUrl>
+		<description>
+<![CDATA[
+<h3>Routename</h3>
+Linie 1
+<hr>
+<strong>Soll 12:40 | Ist 12:45</strong>
+</br>
+]]>
+		</description>
+		<Point>
+		  <coordinates>14,15.3</coordinates>
+		</Point>
+	</Placemark>
+  </Document>
+</kml>

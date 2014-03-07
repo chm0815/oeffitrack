@@ -4,10 +4,11 @@ function createKMLMap(kmlurl, mapdiv = "map")
   var map = new OpenLayers.Map({
     div: "map",
     layers: [
-        new OpenLayers.Layer.WMS(
+        /*new OpenLayers.Layer.WMS(
             "WMS", "http://vmap0.tiles.osgeo.org/wms/vmap0",
             {layers: "basic"}
-        ),
+        ),*/
+        new OpenLayers.Layer.OSM(),
         new OpenLayers.Layer.Vector("KML", {
             strategies: [new OpenLayers.Strategy.Fixed()],
             protocol: new OpenLayers.Protocol.HTTP({
