@@ -2,15 +2,13 @@
 
 class Drivelogs extends CI_Controller
 {
-  function index($routeid, $datetime = null, $view = 'json')
+  function index($routeid, $view = 'json', $datetime = '0')
   {
-    if ($datetime == null)
-    {
-      $datetime = date('Y-m-d H:i:s');
-    }
     $this->db->select('lat,lon,logtime');
     $this->db->order_by('logtime', 'desc');
-    $query = $this->db->get_where('drivelogs', array('routeid' => (int)$routeid, 'logtime <=' => $datetime));
+    $datetime = getStdDateTime($datetime);
+    $start = startTime($datetime);
+    $query = $this->db->get_where('drivelogs', array('routeid' => (int)$routeid, 'logtime <=' => $datetime, 'logtime >=' => $start));
     $rows = $query->result_array();
     if ($view == 'json')
     {
