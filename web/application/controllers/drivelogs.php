@@ -15,5 +15,16 @@ class Drivelogs extends CI_Controller
       $this->output->set_content_type('application/json');
       $this->output->set_output(json_encode($rows));
     }
+    elseif ($view == 'kml')
+    {
+      $this->output->set_content_type('application/vnd.google-earth.kml+xml');
+      $this->load->view('kmlline', 
+          array('rows' => $rows,
+                'routeid' => $routeid, 
+                'name' => 'Drivelogs', 
+                'desc' => "Drivelogs $datetime", 
+                'showbus' => true)
+      );
+    }
   }
 }
