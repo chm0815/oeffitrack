@@ -5,27 +5,61 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="/css/std.css">
 <script src="<?php echo config_item('oet_jquery');?>"></script>
-<script src="<?php echo config_item('oet_openlayers');?>"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script>
-function initialize() {
-  var chicago = new google.maps.LatLng(41.875696,16);
+var timer;
+var test_marker;
+var map;
+function initMap() 
+{
   var mapOptions = {
-    zoom: 11,
-    center: chicago
+    zoom: 10,
+    center: new google.maps.LatLng(47.077349, 15.994597)
   }
 
-  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-  var ctaLayer = new google.maps.KmlLayer({
-    url: '/kml/test1.kml'
+  map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  $.getJSON( "/drivelogs/index/1", function( data ) {
+    jQuery.each(data, function(i, val) {
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(val.lat, val.lon),
+        map: map,
+        title: 'XYZ!'
+      });
+    }
+    );
   });
-  ctaLayer.setMap(map);
+  
+  test_marker = new google.maps.Marker({
+        position: new google.maps.LatLng(47.077349, 15.994597),
+        map: map,
+        title: 'Test Marker',
+        icon: '/img/bus2.png',
+        maxWidth: 200
+      });
+  
+  var contentString = '<h1>This is the Bus</h1>' + 
+                      'S47 Großwilfersdorf-Graz<br />' + 
+                      'Soll: 10:30 Ist: 10:31<br />';
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+  google.maps.event.addListener(test_marker, 'click', function() {
+    infowindow.open(map, test_marker);
+  });
+  
+  
 }
 
-$(document).ready(function()
-  {
-    initialize();
+$(document).ready(function() {
+    initMap();
+    timer = setInterval(function () { 
+    var lat = test_marker.getPosition().lat();
+    var lon = test_marker.getPosition().lng();
+    var pos = new google.maps.LatLng(lat + 0.001, lon + 0.001);
+    test_marker.setPosition(pos);
+    console.log("setpos");
+    map.setCenter(pos);
+  }, 1000);
   }
 );
 </script>
