@@ -1,6 +1,6 @@
 <?php
 
-  class Businformation extends Model
+  class Businformation extends CI_Model
   {
 
     function getActualTarget($routeid, $datetime)
