@@ -25,7 +25,7 @@
       $query = $this->db->query($sql, array($datetime, (int)$routeid, $datetime));
       
       $row = $query->result_array();
-      if (count($row)==1) {
+      if (count($row) == 1) {
         $rv = $row[0];
       }
       return $rv;
