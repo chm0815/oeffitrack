@@ -7,7 +7,7 @@
 <script src="<?php echo config_item('oet_jquery');?>"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script>
-var timer;
+/*var timer;
 var test_marker;
 var map;
 function initMap() 
@@ -61,7 +61,7 @@ $(document).ready(function() {
     map.setCenter(pos);
   }, 1000);
   }
-);
+);*/
 </script>
 
 
