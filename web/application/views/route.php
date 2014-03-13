@@ -2,7 +2,7 @@
 
 function updateTimeTable(data)
 {
-  jQuery.each(data, function(i, val) {
+  $.each(data, function(i, val) {
     if ($("#stopnr" + i).text() != val.stopnr) {
       $("#stopnr" + i).text(val.stopnr);
     }
@@ -44,16 +44,49 @@ function initTimeTable(routeid)
   .done(updateTimeTable);
 }
 
+function updateMapStops(map, data)
+{
+  $.each(data, function(i, val) {
+    var infowindow = new google.maps.InfoWindow({
+      content: val.name
+    });
+    console.log(val.name + "/" + val.lat);
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(val.lat, val.lon),
+        map: map,
+        title: val.name
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map, marker);
+    });
+  });
+}
+
+function initMap()
+{
+   var mapOptions = {
+    zoom: 13,
+    center: new google.maps.LatLng(47.089, 15.89)
+  };
+
+  var map = new google.maps.Map(document.getElementById('map_canvas'),
+      mapOptions);
+  return map;
+}
 
 
 $(document).ready(function() {
+  var map = initMap();
   var routeid = <?php echo $route['id'];?>;
   initTimeTable(routeid);
   setInterval(function() {
-  $.getJSON( "/route/data/" + routeid, updateTimeTable);
+  $.getJSON( "/route/data/" + routeid)
+    .done(function(data) {
+        updateTimeTable(data);
+        updateMapStops(map, data);
+      }
+    );  
   }, 5000);
-
-
 
 });
 
@@ -62,8 +95,9 @@ $(document).ready(function() {
 <h1><?php echo $route['name'].' / '.$route['id'];?></h1>
 
 <div id="timetable_area">
-<table id="timetable" >
+<table id="timetable">
 <tr><th></th><th>nr</th><th>stopname</th><th>target</th><th>actual</th><th>diff</th></tr>
-
 </table>
+</div>
+<div id="map_canvas" class="bigmap" style="margin-top:2em; display:block">
 </div>

@@ -64,3 +64,18 @@ a:hover {
   /*float: left; */
   border: 1px solid black;
 }
+#timetable table
+{
+  border: 1px solid #000000;
+}
+
+#timetable tr:nth-child(even)
+{
+  background: #FFFF99;
+}
+
+
+#timetable td
+{
+  padding: 0.5em;
+}

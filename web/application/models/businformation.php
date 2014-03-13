@@ -6,7 +6,7 @@
     function getActualTarget($routeid, $datetime)
     {
       $sql = "select rs.stopnr as stopnr,rs.stoptime as stoptime,time(al.logtime) as logtime,rs.name as name,
-          time_to_sec(subtime(time(al.logtime),rs.stoptime)) as diff
+          time_to_sec(subtime(time(al.logtime),rs.stoptime)) as diff,rs.lat as lat,rs.lon as lon
           from routestations rs
           left outer join arrivelogs al
           on rs.routeid=al.routeid and rs.stopnr=al.stopnr and date(al.logtime)=date( ? ) and al.logtime<= ?
