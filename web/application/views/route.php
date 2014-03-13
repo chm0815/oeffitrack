@@ -6,8 +6,19 @@ function updateTimeTable(data)
     if ($("#stopnr" + i).text() != val.stopnr) {
       $("#stopnr" + i).text(val.stopnr);
     }
+    if ($("#name" + i).text() != val.name) {
+      $("#name" + i).text(val.name);
+    }
+    if ($("#stoptime" + i).text() != val.stoptime) {
+      $("#stoptime" + i).text(val.stoptime);
+    }
+    if (val.logtime != null && $("#logtime" + i).text() != val.logtime) {
+      $("#logtime" + i).text(val.logtime);
+    }
+    if (val.diff != null &&$("#diff" + i).text() != val.diff) {
+      $("#diff" + i).text(val.diff);
+    }
   });
-
 }
 
 function initTimeTable(routeid)
@@ -38,28 +49,11 @@ function initTimeTable(routeid)
 
 
 $(document).ready(function() {
-
-  initTimeTable(2);
-
-//~ setInterval( function() {
-  //~ $("#timetable").html("");
-   //~ $.getJSON( "/route/data/2", function( data ) {
-    //~ jQuery.each(data, function(i, val) {
-      //~ $("#timetable").append(
-      //~ "<tr>" +
-      //~ "<td>" + val.stopnr + "</td>" +
-      //~ "<td>" + val.name + "</td>" +
-      //~ "<td>" + val.stoptime + "</td>" +
-      //~ "<td>" + ((val.logtime != null) ? val.logtime : "") + "</td>" +
-      //~ "<td>" + ((val.diff != null) ? val.diff : "") + "</td>" +
-      //~ "</tr>"
-      //~ )
-    //~ }
-    //~ );
-    //~ }
-  //~ );
-//~ }, 5000);
-
+  var routeid = <?php echo $route['id'];?>;
+  initTimeTable(routeid);
+  setInterval(function() {
+  $.getJSON( "/route/data/" + routeid, updateTimeTable);
+  }, 5000);
 
 
 
