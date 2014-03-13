@@ -17,6 +17,10 @@ function updateTimeTable(data)
     }
     if (val.diff != null &&$("#diff" + i).text() != val.diff) {
       $("#diff" + i).text(val.diff);
+      if (Math.abs(val.diff) > 3*60)
+      {
+        $("#busicon" + i).html("<img src='/img/busstopred.png'/>");
+      }
     }
   });
 }
@@ -24,26 +28,20 @@ function updateTimeTable(data)
 function initTimeTable(routeid)
 {
   $.getJSON( "/route/data/" + routeid, function( data ) {
-    //~ console.log(json_data);
     jQuery.each(data, function(i, val) {
       $("#timetable").append(
       "<tr>" +
+      "<td><span id='busicon" + i + "'><img src='/img/busstopgrey.png'/></span></td>" +
       "<td><span id='stopnr" + i + "'></span></td>" +
       "<td><span id='name" + i + "'></span></td>" +
       "<td><span id='stoptime" + i + "'></span></td>" +
       "<td><span id='logtime" + i + "'></span></td>" +
       "<td><span id='diff" + i + "'></span></td>" +
-      /*"<td>" + val.name + "</td>" +
-      "<td>" + val.stoptime + "</td>" +
-      "<td>" + ((val.logtime != null) ? val.logtime : "") + "</td>" +
-      "<td>" + ((val.diff != null) ? val.diff : "") + "</td>" +*/
       "</tr>"
       );
     });
   })
   .done(updateTimeTable);
-  
-  //updateTimeTable(json_data);
 }
 
 
@@ -65,7 +63,7 @@ $(document).ready(function() {
 
 <div id="timetable_area">
 <table id="timetable" >
-<tr><th></th><th>station</th><th>target</th><th>actual</th><th>diff</th></tr>
+<tr><th></th><th>nr</th><th>stopname</th><th>target</th><th>actual</th><th>diff</th></tr>
 
 </table>
 </div>
