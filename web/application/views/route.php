@@ -1,5 +1,7 @@
 <script>
 
+var map;
+var info_markers = new Array();
 function updateTimeTable(data)
 {
   $.each(data, function(i, val) {
@@ -31,7 +33,7 @@ function initTimeTable(routeid)
     jQuery.each(data, function(i, val) {
       $("#timetable").append(
       "<tr>" +
-      "<td><span id='busicon" + i + "'><img src='/img/busstopgrey.png'/></span></td>" +
+      "<td><span id='busicon" + i + "'><img src='/img/busstop.png'/></span></td>" +
       "<td><span id='stopnr" + i + "'></span></td>" +
       "<td><span id='name" + i + "'></span></td>" +
       "<td><span id='stoptime" + i + "'></span></td>" +
@@ -41,24 +43,50 @@ function initTimeTable(routeid)
       );
     });
   })
-  .done(updateTimeTable);
+  .done(
+    function(data) {
+      updateTimeTable(data);
+      initMapStops(map, data);
+    }
+  );
+}
+
+function initMapStops(map, data)
+{
+  $.each(data, function(i, val) {
+      var infowindow = new google.maps.InfoWindow({
+        maxWidth: 500,
+        content: "<h1>" + val.name + "</h1>" +
+        "target: " + val.stoptime + "<br />" +
+        "actual: " + (val.logtime != null ? val.logtime : "") + "<br />"
+      });
+      console.log(val.name + "/" + val.lat);
+      var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(val.lat, val.lon),
+          map: map,
+          title: val.name,
+          icon: "/img/busstop.png"
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+      });
+      var infomarker = new Object();
+      infomarker.marker = marker;
+      infomarker.info = infowindow;
+      info_markers.push(infomarker);
+    });
+    
 }
 
 function updateMapStops(map, data)
 {
   $.each(data, function(i, val) {
-    var infowindow = new google.maps.InfoWindow({
-      content: val.name
-    });
-    console.log(val.name + "/" + val.lat);
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(val.lat, val.lon),
-        map: map,
-        title: val.name
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map, marker);
-    });
+    var infowindow = info_markers[i].info;
+    if (val.logtime != null) {
+      infowindow.setContent("<h1>" + val.name + "</h1>" +
+        "target: " + val.stoptime + "<br />" +
+        "actual: " + (val.logtime != null ? val.logtime : "") + "<br />");
+    }
   });
 }
 
@@ -69,14 +97,13 @@ function initMap()
     center: new google.maps.LatLng(47.089, 15.89)
   };
 
-  var map = new google.maps.Map(document.getElementById('map_canvas'),
+  map = new google.maps.Map(document.getElementById('map_canvas'),
       mapOptions);
   return map;
 }
 
-
 $(document).ready(function() {
-  var map = initMap();
+  map = initMap();
   var routeid = <?php echo $route['id'];?>;
   initTimeTable(routeid);
   setInterval(function() {
