@@ -54,13 +54,20 @@ function initTimeTable(routeid)
 function initMapStops(map, data)
 {
   $.each(data, function(i, val) {
+      var infomarker = new Object();
+      var logtime = "";
+      infomarker.logged = false;
+      if (val.logtime != null) {
+        logtime = val.logtime;
+        infomarker.logged = true;
+      }
+      
       var infowindow = new google.maps.InfoWindow({
         maxWidth: 500,
         content: "<h1>" + val.name + "</h1>" +
         "target: " + val.stoptime + "<br />" +
-        "actual: " + (val.logtime != null ? val.logtime : "") + "<br />"
+        "actual: " + logtime + "<br />"
       });
-      console.log(val.name + "/" + val.lat);
       var marker = new google.maps.Marker({
           position: new google.maps.LatLng(val.lat, val.lon),
           map: map,
@@ -70,7 +77,7 @@ function initMapStops(map, data)
       google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map, marker);
       });
-      var infomarker = new Object();
+      
       infomarker.marker = marker;
       infomarker.info = infowindow;
       info_markers.push(infomarker);
@@ -82,10 +89,11 @@ function updateMapStops(map, data)
 {
   $.each(data, function(i, val) {
     var infowindow = info_markers[i].info;
-    if (val.logtime != null) {
+    if (val.logtime != null && !infowindow.logged) {
       infowindow.setContent("<h1>" + val.name + "</h1>" +
         "target: " + val.stoptime + "<br />" +
-        "actual: " + (val.logtime != null ? val.logtime : "") + "<br />");
+        "actual: " + val.logtime + "<br />");
+      infowindow.logged = true;
     }
   });
 }
