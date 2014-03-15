@@ -2,6 +2,7 @@
 
 var map;
 var info_markers = new Array();
+var bus_marker = null;
 function updateTimeTable(data)
 {
   $.each(data, function(i, val) {
@@ -110,17 +111,42 @@ function initMap()
   return map;
 }
 
+
+function drivelogs(routeid)
+{
+  $.getJSON( "/drivelogs/index/" + routeid)
+    .done(function(data) {
+      if (data.length == 0) return;
+      var val = data[data.length -1];
+      if (bus_marker == null) {
+        bus_marker = new google.maps.Marker({
+          position: new google.maps.LatLng(val.lat, val.lon),
+          map: map,
+          title: "route: " + routeid ,
+          icon: "/img/bus2.png"
+        });
+      }
+      else 
+      {
+        bus_marker.setPosition(new google.maps.LatLng(val.lat, val.lon))
+      }
+    }
+  );
+}
+
 $(document).ready(function() {
   map = initMap();
   var routeid = <?php echo $route['id'];?>;
   initTimeTable(routeid);
+  drivelogs(routeid);
   setInterval(function() {
   $.getJSON( "/route/data/" + routeid)
     .done(function(data) {
         updateTimeTable(data);
         updateMapStops(map, data);
       }
-    );  
+    );
+    drivelogs(routeid);
   }, 5000);
 
 });
