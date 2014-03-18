@@ -1,6 +1,7 @@
 <script>
 
 var map;
+var path;
 var info_markers = new Array();
 var bus_marker = null;
 function updateTimeTable(data)
@@ -54,16 +55,6 @@ function initTimeTable(routeid)
 
 function initMapStops(map, data)
 {
-var cooridnates = [];
-var path = new google.maps.Polyline({
-    path: cooridnates,
-    geodesic: true,
-    strokeColor: '#0000FF',
-    strokeOpacity: 1.0,
-    strokeWeight: 2
-  });
-  path.setMap(map);
-
 
   $.each(data, function(i, val) {
       var infomarker = new Object();
@@ -86,9 +77,6 @@ var path = new google.maps.Polyline({
           title: val.name,
           icon: "/img/busstop.png"
       });
-      
-      cooridnates.push(new google.maps.LatLng(val.lat, val.lon));
-      path.setPath(cooridnates);
       
       google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map, marker);
@@ -123,8 +111,19 @@ function initMap()
 
   map = new google.maps.Map(document.getElementById('map_canvas'),
       mapOptions);
+      
+      
+  path = new google.maps.Polyline({
+    geodesic: true,
+    strokeColor: '#0000FF',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+  path.setMap(map);
   return map;
 }
+
+
 
 
 function drivelogs(routeid)
@@ -132,7 +131,7 @@ function drivelogs(routeid)
   $.getJSON( "/drivelogs/index/" + routeid)
     .done(function(data) {
       if (data.length == 0) return;
-      var val = data[data.length -1];
+      var val = data[0];
       if (bus_marker == null) {
         bus_marker = new google.maps.Marker({
           position: new google.maps.LatLng(val.lat, val.lon),
@@ -145,6 +144,13 @@ function drivelogs(routeid)
       {
         bus_marker.setPosition(new google.maps.LatLng(val.lat, val.lon))
       }
+      
+      var cooridnates = new Array();
+      $.each(data, function(i, value) {
+        cooridnates.push(new google.maps.LatLng(value.lat, value.lon));
+      });
+      path.setPath(cooridnates);
+      
     }
   );
 }
