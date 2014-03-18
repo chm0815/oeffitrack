@@ -54,6 +54,17 @@ function initTimeTable(routeid)
 
 function initMapStops(map, data)
 {
+var cooridnates = [];
+var path = new google.maps.Polyline({
+    path: cooridnates,
+    geodesic: true,
+    strokeColor: '#0000FF',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+  path.setMap(map);
+
+
   $.each(data, function(i, val) {
       var infomarker = new Object();
       var logtime = "";
@@ -75,6 +86,10 @@ function initMapStops(map, data)
           title: val.name,
           icon: "/img/busstop.png"
       });
+      
+      cooridnates.push(new google.maps.LatLng(val.lat, val.lon));
+      path.setPath(cooridnates);
+      
       google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map, marker);
       });
