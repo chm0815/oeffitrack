@@ -12,6 +12,18 @@ class Logger extends CI_Model
     return $rv;
   }
   
+  function checkLoginByName($name, $pw)
+  {
+    $pwhash = sha1($pw); 
+    $this->db->where(array('name' => $name, 'pwhash' => $pwhash, 'active' => 'Y'));
+    $query = $this->db->get('loggers');
+    if ($query->num_rows() == 1) 
+    {
+      return $query->row_array();
+    }
+    return null;
+  }
+  
   function countLoggers()
   {
     $rv = $this->db->count_all('loggers');

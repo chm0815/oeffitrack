@@ -1,6 +1,6 @@
 <?php
 
-  class PositionLogger extends Model 
+  class PositionLogger extends CI_Model 
   {    
     function logPosition($loggerid,$routeid,$lat,$lon,$routepointid=-1)
     {
@@ -8,14 +8,14 @@
       log_message('debug','trying logPosition()');
       $logtime = date('Y-m-d H:i:s');
       $data = array(
-            'loggerid'=>$loggerid,
-            'routeid'=>$routeid,
-            'lat'=>$lat,
-            'lon'=>$lon,
-            'logtime'=>$logtime
+            'loggerid' => $loggerid,
+            'routeid' => $routeid,
+            'lat' => $lat,
+            'lon' => $lon,
+            'logtime' => $logtime
           );
       
-      $rv = $this->db->insert('drivelogs',$data);
+      $rv = $this->db->insert('drivelogs', $data);
       
       if  (!$rv) {
         $logdata = var_export($data,true);
@@ -25,7 +25,7 @@
       if ($routepointid !=-1 && $rv) {
         $sdate = date('Y-m-d').' 00:00';
         $edate = date('Y-m-d H:i:s');//' 23:59:59';
-        $this->db->where(array('routeid'=>$routeid,'routepointid'=>$routepointid,'logtime >='=>$sdate,'logtime <='=>$edate));
+        $this->db->where(array('routeid' => $routeid, 'routepointid' => $routepointid, 'logtime >=' => $sdate, 'logtime <=' => $edate));
         $count = $this->db->count_all_results('arrivelogs');
         if  ($count==0) {
           $data = array(
@@ -35,19 +35,17 @@
             'lon'=>$lon,
             'loggerid'=>$loggerid,
           );
-          $rv = $this->db->insert('routelogs',$data);
+          $rv = $this->db->insert('routelogs', $data);
           if (!$rv) {
-            $logdata = var_export($data,true);
+            $logdata = var_export($data, true);
             log_message('error','Insert into routelogs failed: '.$logdata."\n");
           }
         } else {
-          log_message('warn','Routelog for routepointid '.$routepointid." already exists\n");
+          log_message('warn', 'Routelog for routepointid '.$routepointid." already exists\n");
         }
       }
       return $rv;
     }
-    
   }
-
 
 ?>

@@ -55,6 +55,14 @@ function initTimeTable(routeid)
 
 function initMapStops(map, data)
 {
+  if (data.length > 0)
+  {
+    var middle = Math.floor(data.length / 2);
+    map.setCenter( 
+      new google.maps.LatLng(data[middle].lat, 
+                            data[middle].lon));
+  }
+
 
   $.each(data, function(i, val) {
       var infomarker = new Object();
@@ -106,7 +114,7 @@ function initMap()
 {
    var mapOptions = {
     zoom: 13,
-    center: new google.maps.LatLng(47.089, 15.89)
+    center: new google.maps.LatLng(0, 0)
   };
 
   map = new google.maps.Map(document.getElementById('map_canvas'),

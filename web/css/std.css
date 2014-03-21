@@ -79,3 +79,14 @@ a:hover {
 {
   padding: 0.5em;
 }
+
+fieldset
+{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#loginfield
+{
+  width: 20%;
+}

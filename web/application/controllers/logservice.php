@@ -24,7 +24,8 @@ class LogService extends CI_Controller {
     if (count($parameters) != 6) 
     {
       return $this->xmlrpc->send_error_message('100', 'wrong number of parameters '.count($parameters));
-    } else 
+    } 
+    else 
     {
       $loggerid= $parameters[0];
       $pw = $parameters[1];
@@ -34,14 +35,14 @@ class LogService extends CI_Controller {
       $routepointid = $parameters[5];
     }
 
-    $loginok = $this->logger->checkLogin($loggerid,$pw);
+    $loginok = $this->logger->checkLogin($loggerid, $pw);
     if ($loginok == false) 
     {
       log_message('error','authentification failed (LogService loggerid='.$loggerid.' pw='.$pw.")\n");
       return $this->xmlrpc->send_error_message('101', 'authentification failed');
     }
     
-    $rv = $this->positionlogger->logPosition($loggerid,$routeid,$lat,$lon,$routepointid);
+    $rv = $this->positionlogger->logPosition($loggerid, $routeid, $lat, $lon, $routepointid);
     
     if (!$rv) 
     {
