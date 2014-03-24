@@ -76,8 +76,8 @@ $(document).ready(function() {
         <?php if (!$this->session->userdata('logged_in')): ?>
         </a></li><li><a href="/main/login">Login
         <?php else:?>
-        </a></li><li><a href="#">Edit
-        </a></li><li><a href="#">Logging
+        </a></li><li><a href="/edit/index">Edit
+        </a></li><li><a href="/logging/index">Logging
         </a></li><li><a href="/main/logout">Logout
         <?php endif; ?>
         </a></li></ul>
