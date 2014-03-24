@@ -73,7 +73,13 @@ $(document).ready(function() {
       <ul>
         <li><a href="/">Overview
         </a></li><li><a href="/routes">Routes
-        </a></li><li><a href="#">Login
+        <?php if (!$this->session->userdata('logged_in')): ?>
+        </a></li><li><a href="/main/login">Login
+        <?php else:?>
+        </a></li><li><a href="#">Edit
+        </a></li><li><a href="#">Logging
+        </a></li><li><a href="/main/logout">Logout
+        <?php endif; ?>
         </a></li></ul>
     </div><!--End nav-->
   <div id="wrapper">

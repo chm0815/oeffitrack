@@ -49,7 +49,7 @@ class Main extends CI_Controller
     if (!$this->session->userdata('logged_in')) {
       die('not logged in');
     }
-    $this->load->view("loggerheader");
+    $this->load->view("stdheader");
     $this->load->view("overview");
     $this->load->view("stdfooter");
   }
