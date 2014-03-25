@@ -31,4 +31,12 @@ class Route extends CI_Controller
     $this->output->set_output(json_encode(array('diff' => $diff)));
   }
   
+  function routestations($routeid)
+  {
+    $this->load->model('routestation');
+    $rows = $this->routestation->loadRouteStations($routeid);
+    $this->output->set_content_type('application/json'); 
+    $this->output->set_output(json_encode($rows));
+  }
+  
 }
