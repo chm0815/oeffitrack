@@ -224,18 +224,30 @@ function logPosition(routeid, current_lat, current_lon)
     }
   });
   
-  $.getJSON( "/logging/log/",
+  //~ $.getJSON( "/logging/log/",
+      //~ {
+        //~ routeid: routeid,
+        //~ lat: current_lat,
+        //~ lon: current_lon,
+        //~ routepointid: rpid
+      //~ }
+    //~ )
+    //~ .done(function(data) {
+      //~ // todo update status div
+    //~ }
+  //~ );
+  
+  $.post("/logging/log/", 
       {
         routeid: routeid,
         lat: current_lat,
         lon: current_lon,
         routepointid: rpid
-      }
-    )
-    .done(function(data) {
-      // todo update status div
-    }
-  );
+      }, 
+    function(data, textStatus) {
+    //data contains the JSON object
+    //textStatus contains the status: success, error, etc
+    }, "json");
 
 }
 
