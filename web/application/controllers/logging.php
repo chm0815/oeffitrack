@@ -44,6 +44,8 @@ class Logging extends CI_Controller
     $routepointid = $this->input->post('routepointid', TRUE);
     
     $rv = $this->positionlogger->logPosition($loggerid, $routeid, $lat, $lon, $routepointid);
+    $this->output->set_content_type('application/json');
+    $this->output->set_output(json_encode(array('status' => 'OK')));
   }
   
 }

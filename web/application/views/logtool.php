@@ -187,6 +187,7 @@ $(document).ready(function() {
 var logging;
 var logtimer;
 var routestations;
+var routeid = <?php echo $route['id'];?>;
 
 //------------------------------------------------------------------------------
 // http://stackoverflow.com/questions/27928/how-do-i-calculate-distance-between-two-latitude-longitude-points
@@ -210,6 +211,34 @@ function deg2rad(deg) {
 //------------------------------------------------------------------------------
 
 
+function logPosition(routeid, current_lat, current_lon)
+{
+  var rpid = -1;
+  $.each(routestations, function(i, rs) {
+    if (rs.logged == false &&
+      getDistanceFromLatLonInMeter(rs.lat, rs.lon, current_lat, current_lon) < 40.0)
+    {
+      rpid = rs.routepointid;
+      rs.logged = true;
+      return false;
+    }
+  });
+  
+  $.getJSON( "/logging/log/",
+      {
+        routeid: routeid,
+        lat: current_lat,
+        lon: current_lon,
+        routepointid: rpid
+      }
+    )
+    .done(function(data) {
+      // todo update status div
+    }
+  );
+
+}
+
 function initRouteStations(data)
 {
   routestations = new Array();
@@ -221,9 +250,45 @@ function initRouteStations(data)
 }
 
 
+var options = 
+{
+  enableHighAccuracy: false,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) 
+{
+  var crd = pos.coords;
+  console.log('Your current position is:');
+  console.log('Latitude : ' + crd.latitude);
+  console.log('Longitude: ' + crd.longitude);
+  console.log('More or less ' + crd.accuracy + ' meters.');
+  logPosition(routeid, crd.latitude, crd.longitude);
+}
+
+function error(err) 
+{
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+}
+
+function startLogging()
+{
+  navigator.geolocation.getCurrentPosition(success, error, options);
+  timer = setInterval(
+    function() {
+      navigator.geolocation.getCurrentPosition(success, error, options);
+    }
+  ,10000);
+}
+
+function stopLogging()
+{
+  clearInterval(timer);
+}
+
 $(document).ready(function() {
   logging = false;
-  var routeid = <?php echo $route['id'];?>;
   $.getJSON( "/route/routestations/" + routeid)
     .done(function(data) {
       initRouteStations(data);
@@ -234,10 +299,12 @@ $(document).ready(function() {
     if (logging) {
       logging = false;
       $(this).text("Start Logging");
+      stopLogging();
     }
     else {
       logging = true;
       $(this).text("Stop Logging");
+      startLogging();
     }
   });
 
