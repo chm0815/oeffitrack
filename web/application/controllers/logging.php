@@ -29,4 +29,21 @@ class Logging extends CI_Controller
     $this->load->view('stdfooter');
   }
   
+  function log()
+  {
+    if (!$this->session->userdata('logged_in')) {
+      die('not logged in');
+    }
+    $this->load->model('positionlogger');
+    
+    $logger =  $this->session->userdata('logger');
+    $loggerid = $logger['id'];
+    $routeid = $this->input->post('routeid', TRUE);
+    $lat = $this->input->post('lat', TRUE);
+    $lon = $this->input->post('lon', TRUE);
+    $routepointid = $this->input->post('routepointid', TRUE);
+    
+    $rv = $this->positionlogger->logPosition($loggerid, $routeid, $lat, $lon, $routepointid);
+  }
+  
 }
