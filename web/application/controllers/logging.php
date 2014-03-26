@@ -17,7 +17,7 @@ class Logging extends CI_Controller
   }
   
   
-  function logtool($routeid)
+  function logtool($routeid, $mock = '0')
   {
     if (!$this->session->userdata('logged_in')) {
       die('not logged in');
@@ -25,7 +25,7 @@ class Logging extends CI_Controller
     $this->load->model('routeinfo');
     $route = $this->routeinfo->get($routeid);
     $this->load->view('stdheader');
-    $this->load->view('logtool', array('route' => $route));
+    $this->load->view('logtool', array('route' => $route, 'mock' => $mock));
     $this->load->view('stdfooter');
   }
   
