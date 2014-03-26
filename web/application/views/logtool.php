@@ -1,3 +1,7 @@
+<?php if ($mock != '0'):?>
+<script src="/js/geomock.js"></script>
+<?php endif;?>
+
 <script>
 
 var map;
@@ -176,7 +180,7 @@ $(document).ready(function() {
       }
     );
     drivelogs(routeid);
-  }, 5000);
+  }, 2000);
 
 });
 
@@ -216,7 +220,7 @@ function logPosition(routeid, current_lat, current_lon)
   var rpid = -1;
   $.each(routestations, function(i, rs) {
     if (rs.logged == false &&
-      getDistanceFromLatLonInMeter(rs.lat, rs.lon, current_lat, current_lon) < 40.0)
+      getDistanceFromLatLonInMeter(rs.lat, rs.lon, current_lat, current_lon) <= 60.0)
     {
       rpid = rs.routepointid;
       rs.logged = true;

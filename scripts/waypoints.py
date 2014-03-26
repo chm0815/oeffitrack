@@ -11,4 +11,4 @@ with open(filename) as fp:
     lat = line['lat']
     lon = line['lon']
     acc = 0
-    print "  latitude: %s\n  longitute: %s\n  accuracy: %d\n}}," % (lat, lon, acc)
+    print "  latitude: %s,\n  longitude: %s,\n  accuracy: %d\n}}," % (lat, lon, acc)

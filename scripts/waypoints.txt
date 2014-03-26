@@ -1,426 +1,426 @@
 {coords: {
 
-  latitude: 47.0916
-  longitute: 15.8813
+  latitude: 47.0916,
+  longitude: 15.8813,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0912
-  longitute: 15.8829
+  latitude: 47.0912,
+  longitude: 15.8829,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0908
-  longitute: 15.8852
+  latitude: 47.0908,
+  longitude: 15.8852,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0903
-  longitute: 15.8872
+  latitude: 47.0903,
+  longitude: 15.8872,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0899
-  longitute: 15.8895
+  latitude: 47.0899,
+  longitude: 15.8895,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0898
-  longitute: 15.8902
+  latitude: 47.0898,
+  longitude: 15.8902,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0895
-  longitute: 15.8917
+  latitude: 47.0895,
+  longitude: 15.8917,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0891
-  longitute: 15.8948
+  latitude: 47.0891,
+  longitude: 15.8948,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0891
-  longitute: 15.8954
+  latitude: 47.0891,
+  longitude: 15.8954,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0891
-  longitute: 15.8954
+  latitude: 47.0891,
+  longitude: 15.8954,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0892
-  longitute: 15.8983
+  latitude: 47.0892,
+  longitude: 15.8983,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0894
-  longitute: 15.901
+  latitude: 47.0894,
+  longitude: 15.901,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0903
-  longitute: 15.9039
+  latitude: 47.0903,
+  longitude: 15.9039,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0909
-  longitute: 15.9068
+  latitude: 47.0909,
+  longitude: 15.9068,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0906
-  longitute: 15.9091
+  latitude: 47.0906,
+  longitude: 15.9091,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0905
-  longitute: 15.9094
+  latitude: 47.0905,
+  longitude: 15.9094,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0905
-  longitute: 15.9094
+  latitude: 47.0905,
+  longitude: 15.9094,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0899
-  longitute: 15.9112
+  latitude: 47.0899,
+  longitude: 15.9112,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.089
-  longitute: 15.9136
+  latitude: 47.089,
+  longitude: 15.9136,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0879
-  longitute: 15.9157
+  latitude: 47.0879,
+  longitude: 15.9157,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0872
-  longitute: 15.9178
+  latitude: 47.0872,
+  longitude: 15.9178,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0871
-  longitute: 15.922
+  latitude: 47.0871,
+  longitude: 15.922,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.087
-  longitute: 15.9219
+  latitude: 47.087,
+  longitude: 15.9219,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0869
-  longitute: 15.9236
+  latitude: 47.0869,
+  longitude: 15.9236,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0865
-  longitute: 15.9251
+  latitude: 47.0865,
+  longitude: 15.9251,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0865
-  longitute: 15.9263
+  latitude: 47.0865,
+  longitude: 15.9263,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0864
-  longitute: 15.9266
+  latitude: 47.0864,
+  longitude: 15.9266,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0864
-  longitute: 15.9266
+  latitude: 47.0864,
+  longitude: 15.9266,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0864
-  longitute: 15.9273
+  latitude: 47.0864,
+  longitude: 15.9273,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0863
-  longitute: 15.9273
+  latitude: 47.0863,
+  longitude: 15.9273,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0863
-  longitute: 15.9282
+  latitude: 47.0863,
+  longitude: 15.9282,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0864
-  longitute: 15.9305
+  latitude: 47.0864,
+  longitude: 15.9305,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0863
-  longitute: 15.933
+  latitude: 47.0863,
+  longitude: 15.933,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0856
-  longitute: 15.9354
+  latitude: 47.0856,
+  longitude: 15.9354,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0848
-  longitute: 15.9379
+  latitude: 47.0848,
+  longitude: 15.9379,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.084
-  longitute: 15.9405
+  latitude: 47.084,
+  longitude: 15.9405,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0834
-  longitute: 15.9426
+  latitude: 47.0834,
+  longitude: 15.9426,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0834
-  longitute: 15.9426
+  latitude: 47.0834,
+  longitude: 15.9426,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0831
-  longitute: 15.9433
+  latitude: 47.0831,
+  longitude: 15.9433,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.083
-  longitute: 15.9433
+  latitude: 47.083,
+  longitude: 15.9433,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.083
-  longitute: 15.9446
+  latitude: 47.083,
+  longitude: 15.9446,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0833
-  longitute: 15.9467
+  latitude: 47.0833,
+  longitude: 15.9467,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0834
-  longitute: 15.9497
+  latitude: 47.0834,
+  longitude: 15.9497,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.083
-  longitute: 15.9527
+  latitude: 47.083,
+  longitude: 15.9527,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0827
-  longitute: 15.9551
+  latitude: 47.0827,
+  longitude: 15.9551,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0819
-  longitute: 15.9578
+  latitude: 47.0819,
+  longitude: 15.9578,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0808
-  longitute: 15.9603
+  latitude: 47.0808,
+  longitude: 15.9603,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0797
-  longitute: 15.9623
+  latitude: 47.0797,
+  longitude: 15.9623,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0787
-  longitute: 15.9642
+  latitude: 47.0787,
+  longitude: 15.9642,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0776
-  longitute: 15.9662
+  latitude: 47.0776,
+  longitude: 15.9662,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0764
-  longitute: 15.9686
+  latitude: 47.0764,
+  longitude: 15.9686,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0754
-  longitute: 15.9714
+  latitude: 47.0754,
+  longitude: 15.9714,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0746
-  longitute: 15.9738
+  latitude: 47.0746,
+  longitude: 15.9738,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0746
-  longitute: 15.9738
+  latitude: 47.0746,
+  longitude: 15.9738,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0737
-  longitute: 15.9768
+  latitude: 47.0737,
+  longitude: 15.9768,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0733
-  longitute: 15.9795
+  latitude: 47.0733,
+  longitude: 15.9795,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0734
-  longitute: 15.9826
+  latitude: 47.0734,
+  longitude: 15.9826,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.074
-  longitute: 15.9853
+  latitude: 47.074,
+  longitude: 15.9853,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0747
-  longitute: 15.9873
+  latitude: 47.0747,
+  longitude: 15.9873,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0755
-  longitute: 15.9893
+  latitude: 47.0755,
+  longitude: 15.9893,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0764
-  longitute: 15.9907
+  latitude: 47.0764,
+  longitude: 15.9907,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0773
-  longitute: 15.9921
+  latitude: 47.0773,
+  longitude: 15.9921,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0778
-  longitute: 15.9935
+  latitude: 47.0778,
+  longitude: 15.9935,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0776
-  longitute: 15.9941
+  latitude: 47.0776,
+  longitude: 15.9941,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0776
-  longitute: 15.9941
+  latitude: 47.0776,
+  longitude: 15.9941,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0774
-  longitute: 15.9946
+  latitude: 47.0774,
+  longitude: 15.9946,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0773
-  longitute: 15.9947
+  latitude: 47.0773,
+  longitude: 15.9947,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0773
-  longitute: 15.9948
+  latitude: 47.0773,
+  longitude: 15.9948,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0773
-  longitute: 15.9948
+  latitude: 47.0773,
+  longitude: 15.9948,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0773
-  longitute: 15.9949
+  latitude: 47.0773,
+  longitude: 15.9949,
   accuracy: 0
 }},
 {coords: {
 
-  latitude: 47.0773
-  longitute: 15.9949
+  latitude: 47.0773,
+  longitude: 15.9949,
   accuracy: 0
 }},
