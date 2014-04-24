@@ -189,5 +189,6 @@ $(document).ready(function() {
 <tr><th></th><th>nr</th><th>stopname</th><th>target</th><th>actual</th><th>diff</th></tr>
 </table>
 </div>
-<div id="map_canvas" class="bigmap" style="margin-top:2em; display:block">
+<div id="map_canvas" class="routemap">
 </div>
+<div style="clear: both"></div>
