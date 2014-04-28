@@ -50,7 +50,7 @@ class Main extends CI_Controller
       die('not logged in');
     }
     $this->load->view("stdheader");
-    $this->load->view("overview");
+    //$this->load->view("overview");
     $this->load->view("stdfooter");
   }
   

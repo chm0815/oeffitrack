@@ -71,7 +71,6 @@ $(document).ready(function() {
   </div><!--End Header-->
     <div id="nav">
       <ul>
-        <li><a href="/">Overview
         </a></li><li><a href="/routes">Routes
         <?php if (!$this->session->userdata('logged_in')): ?>
         </a></li><li><a href="/main/login">Login

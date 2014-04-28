@@ -1,4 +1,4 @@
-<h1>Routes</h1>
+<h1>Logging</h1>
 
 <div id="routesdiv">
 <ul>
