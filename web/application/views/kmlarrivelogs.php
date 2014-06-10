@@ -16,8 +16,8 @@
       <styleUrl>#routepoint</styleUrl>
 		<description>
 <![CDATA[
-<h3><?php echo $routename;?></h3>
-<?php echo 'Route '.$row['routeid'].' | stopnr: '.$row['stopnr']."\r\n";?>
+<h3><?php echo 'Route '.$routeid;?></h3>
+<?php echo 'Route '.$routeid.' | stopnr: '.$row['stopnr']."\r\n";?>
 <hr>
 <strong>Target: <?php echo $row['stoptime']; ?> | Actual: <?php echo $row['logtime'];?></strong>
 </br>
