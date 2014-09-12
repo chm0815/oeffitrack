@@ -1,0 +1,26 @@
+- Requirements:
+  Apache Webserver (tested with 2.2.17)
+  Apache module mod_rewrite
+
+  MySQL (tested with 5.5.8)
+  
+  PHP (tested with 5.3.5)
+  
+  
+To install oeffitrack simply copy the web folder to your apache www directory 
+and set  to Apache DocumentRoot to this directory
+
+Set up the MySQL Database:
+Import the sql/Dump20140610.sql file if you want to have a full set up Oeffitrack database.
+This includes one route and a sample user/admin with login: test pw: 1234
+
+Or only run the sql/schema.sql if you want to have a blank database.
+
+CodeIgniter Config:
+web/application/config
+
+config.php:
+Change the $config['base_url'] to the URL of your installation (default http://localhost/)
+
+database.php
+Here you can change the hostname, username, password, databasename etc of your database
